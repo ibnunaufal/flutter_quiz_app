@@ -48,7 +48,14 @@ class _MyAppState extends State<MyApp> {
                 }).toList(),
               ])
             : Center(
-                child: Text('Sudah selesai'),
+                child: Column(children: [
+                  Text('Sudah selesai'),
+                  ElevatedButton(onPressed: (){
+                    setState(() {
+                      questionsIndex = 0;
+                    });                    
+                  }, child: Text('Ulangi lagi'))
+                ],),
               ),
       ),
     );
